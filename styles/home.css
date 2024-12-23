@@ -1,0 +1,163 @@
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.greeting {
+  background-image: linear-gradient(90deg, var(--main), rgba(0, 0, 0, 0.75));
+  border-radius: .5em;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-column: span 2;
+}
+
+.greeting img {
+  max-width: 10em;
+}
+
+.greetings{
+  font-size: 2rem;
+  color: white;
+  padding: 0 .25em;
+  text-align: left;
+  margin: 0;
+}
+
+.streak-wrapper {
+  display: flex;
+  align-items: center;
+  grid-column: span 2;
+}
+
+.streaks {
+  background-image: linear-gradient(90deg, var(--main), rgba(0, 0, 0, 0.75));
+  padding: .5em;
+  width: 100%;
+  border-radius: .5em;
+  color: white;
+}
+
+.streak-top {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 1em 1.5em 0 1.5em;
+}
+
+.streak-top img {
+  width: 2.25rem;
+}
+
+.streak-top p {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  align-self: flex-end;
+}
+
+.streak-bottom {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.day {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: .35em;
+  border-radius: .5em;
+}
+
+.day p {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: .3em;
+}
+
+.streak-fill {
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 3.5em;
+  border-radius: .5em;
+}
+
+.filled {
+  background-color: rgb(208, 230, 43);
+}
+
+.current-day {
+  outline: .1em solid rgba(255, 255, 255, 0.58);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.blocks {
+  background-image: linear-gradient(90deg, var(--main) 55%, rgba(0, 0, 0, 0.75));
+  padding: 1em;
+  border-radius: .5em;
+  color: white;
+  display: flex;
+  justify-content: space-between;align-items: center;
+}
+
+.blocks img {
+  width: 3em;
+}
+
+.block-text h3 {
+  font-size: 2rem;
+}
+
+.block-text p {
+  font-size: .8rem;
+  font-weight: 500;
+}
+
+.recents h2 {
+  font-size: 1.5rem;
+  margin: 1em 0 .5em 0;
+}
+
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+}
+
+.home-card {
+  background-color: var(--main);
+  border-radius: .5em;
+  transition: all 200ms ease-in;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: .75em;
+  width: 100%;
+}
+
+@media (min-width: 750px) {
+  .dashboard {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .day {
+    padding: .5em;
+  }
+
+  .streaks {
+    background-image: linear-gradient(270deg, var(--main), rgba(0, 0, 0, 0.75));
+  }
+
+  .home-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card-img {
+    display: block;
+  }
+}

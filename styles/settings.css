@@ -1,0 +1,86 @@
+#account-section {
+  width: 100%;
+  max-width: 65em;
+}
+
+.head-label {
+  max-width: 30em;
+  margin-bottom: 1.5em;
+}
+
+.head-label h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h3 {
+  margin-bottom: .5em;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.account-forms {
+  margin-bottom: .75em;
+  width: 100%;
+  max-width: 30em;
+  display: flex;
+  flex-direction: column;
+}
+
+.account-forms label {
+  display: block;
+  margin: .5em 0;
+  margin-left: .5em;
+  font-weight: 500;
+}
+
+.account-forms input{
+  width: 100%;
+  padding: .75em;
+  border: none;
+  border-radius: .5em;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(53, 53, 53);
+  background-color: rgb(245, 245, 245);
+}
+
+.account-forms button {
+  background-color: var(--main);
+  color: white;
+  padding: .75em;
+  border: none;
+  border-radius: .25em;
+  margin-top: .75em;
+  align-self: flex-end;
+  transition: 200ms ease-in-out;
+}
+
+.account-forms button:hover {
+  opacity: .9;
+}
+
+.accountUpdateSuccess {
+  padding: .75em;
+  border-radius: .5em;
+  background-color: green;
+  color: white;
+}
+
+.accountUpdateError {
+  padding: .75em;
+  border-radius: .5em;
+  background-color: red;
+  color: white;
+}
+
+@media (max-width: 80em) {
+  .head-label {
+    margin: 0 auto;
+    padding-bottom: 1.5em;
+  }
+
+  .account-forms {
+    margin: 0 auto;
+  }
+}

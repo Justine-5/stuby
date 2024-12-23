@@ -1,0 +1,214 @@
+:root {
+  --main: rgb(45, 65, 83);
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+a {
+  text-decoration: none;
+}
+
+html, main {
+  min-height: 100svh;
+}
+
+main {
+  padding: 1em .5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  max-width: 20em;
+  border-radius: 1em;
+}
+
+.back:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.back img {
+  width: 2em;
+}
+
+.back h2 {
+  color: black;
+  font-size: 1.25rem;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+
+.card {
+  flex: 1;
+  max-width: 60em;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  padding-bottom: 1.5em;
+}
+
+.background {
+  position: relative;
+  flex: 1;
+  width: 90%;
+  background-color: rgba(12, 30, 25, 0.8);
+  border-radius: 2em;
+  border: none;
+  font-size: 1.5rem;
+  margin: 0 auto;
+}
+
+.card-holder {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main);
+  border-radius: 2em;
+  border: none;
+  font-size: 1.5rem;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+}
+
+.card-holder:hover {
+  box-shadow: .5em .5em .5em rgba(0, 0, 0, 0.1);
+}
+
+.card-click {
+  transform: rotateY(180deg);
+}
+
+.front-card,
+.back-card{
+  position: absolute;
+  background-color: var(--main);
+  border-radius: 2em;
+  border: none;
+  color: white;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  cursor: pointer;
+  overflow-y: auto;
+}
+
+.back-card {
+  transform: rotateY(180deg);
+}
+
+.front-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.front-card p {
+  padding: 1em;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+hr {
+  border: .1rem solid rgba(255, 255, 255, 0.2);
+  width: 80%;
+  max-width: 30em;
+  margin: 0 auto;
+}
+
+.back-card {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: .5em;
+}
+
+.front-text p {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: .75em 0;
+}
+
+.back-text {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.front-text,
+.back-text {
+  overflow-y: auto;
+}
+
+.back-text p {
+  font-size: 1rem;
+}
+
+.back-card p {
+  text-align: center;
+}
+
+.card a {
+  padding: .5em;
+  margin: 4em 0;
+  background-color: rgba(45, 65, 83, 0.7);
+  display: flex;
+  transition: 150ms ease-in-out;
+}
+
+.card a:hover {
+  opacity: .9;
+  box-shadow: .5em .5em .5em rgba(0, 0, 0, 0.2);
+}
+
+.left {
+  border-radius: 2em 0 0 2em;
+}
+
+.right {
+  border-radius: 0 2em 2em 0;
+}
+
+.card img {
+  width: 2em;
+  margin: auto 0;
+  
+}
+
+.progress p {
+  text-align: center;
+  font-weight: 500;
+}
+
+.progress-bar,
+.progress-bar-fill {
+  height: 2vh;
+  max-width: 60em;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: rgba(45, 65, 83, 0.5);
+  background-blend-mode: color;
+  border-radius: 1em;
+  overflow: hidden;
+  margin: 0 auto .5em auto;
+}
+
+.progress-bar-fill {
+  width: 50%;
+  background-color: var(--main);
+  transition: 200ms ease-in-out;
+}
